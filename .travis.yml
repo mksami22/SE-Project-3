@@ -12,5 +12,7 @@ script:
   - python -m pytest -v test/
   - coverage run --source ./code/ -m pytest -v ./test/
   - pylint code/
+script:
+  - flake8 --ignore=E501,E402,E722, W291, F403, F405, F401, E203, E225, E231, E303, E402, W293
 after_success:
   - bash <(curl -s https://codecov.io/bash)
