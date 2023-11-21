@@ -2,14 +2,20 @@
 # MIT License
 
 from code.extract_sizes import extract_words, text_to_groupings
-from code.wordprocessing import extract_noun_chunks, merge_slide_with_same_headers, duplicate_word_removal, \
-    construct_search_query
+from code.wordprocessing import (
+    extract_noun_chunks,
+    merge_slide_with_same_headers,
+    duplicate_word_removal,
+    construct_search_query,
+)
 
 """
 Given some predefined PDFs, make sure that the results are not None
 """
 
 PDF_NAME = "data/arp.pdf"
+
+
 def test_groupings():
     """
 
@@ -23,7 +29,7 @@ def test_groupings():
     assert groupings is not None
     # check that the structure is right
 
-    structure_dict = {'Header': str, 'Paragraph': str, 'slide': int}
+    structure_dict = {"Header": str, "Paragraph": str, "slide": int}
     for slide in groupings:
         # assert that each slide has a header, paragraph, and slide
         for struct in structure_dict.keys():
@@ -50,15 +56,23 @@ def test_chunks():
     assert chunks is not None
     # [{"Header": "", "Paragraph": "", "Header_keywords": [], "Paragraph_keywords": [], slide: int}]
     # assert the structure is correct
-    structure_dict = {'Header': str, 'Paragraph': str, 'Header_keywords': list, 'Paragraph_keywords': list, 'slide': int}
+    structure_dict = {
+        "Header": str,
+        "Paragraph": str,
+        "Header_keywords": list,
+        "Paragraph_keywords": list,
+        "slide": int,
+    }
     for slide in chunks:
         # assert that each slide has a header, paragraph, and slide
         for struct in structure_dict.keys():
-            assert struct in slide, f'{struct} should be in slide'
+            assert struct in slide, f"{struct} should be in slide"
             # assert the field is not None
-            assert slide[struct] is not None, f'{struct} in slide should not be none'
+            assert slide[struct] is not None, f"{struct} in slide should not be none"
             # assert the type is correct
-            assert type(slide[struct]) is structure_dict[struct], f'{struct} should be a {structure_dict[struct]}'
+            assert (
+                type(slide[struct]) is structure_dict[struct]
+            ), f"{struct} should be a {structure_dict[struct]}"
 
 
 def test_merge_slide_with_same_headers():
@@ -79,16 +93,23 @@ def test_merge_slide_with_same_headers():
     assert chunks is not None
     # [{"Header": "", "Header_keywords": [], "Paragraph_keywords": [], slides: [int]}]
     # assert the structure is correct
-    structure_dict = {'Header': str, 'Header_keywords': list, 'Paragraph_keywords': list, 'slides': list}
+    structure_dict = {
+        "Header": str,
+        "Header_keywords": list,
+        "Paragraph_keywords": list,
+        "slides": list,
+    }
     for slide in chunks:
         # assert that each slide has a header, paragraph, and slide
         for struct in structure_dict.keys():
             # assert the field is present
-            assert struct in slide, f'{struct} should be in slide'
+            assert struct in slide, f"{struct} should be in slide"
             # assert the field is not None
-            assert slide[struct] is not None, f'{struct} in slide should not be none'
+            assert slide[struct] is not None, f"{struct} in slide should not be none"
             # assert the type is correct
-            assert type(slide[struct]) is structure_dict[struct], f'{struct} should be a {structure_dict[struct]}'
+            assert (
+                type(slide[struct]) is structure_dict[struct]
+            ), f"{struct} should be a {structure_dict[struct]}"
 
 
 def test_duplicate_word_removal():
@@ -110,16 +131,24 @@ def test_duplicate_word_removal():
     assert chunks is not None
     # [{"Header": "", "Header_keywords": [], "Paragraph_keywords": [], slides: [int]}]
     # assert the structure is correct
-    structure_dict = {'Header': str, 'Header_keywords': list, 'Paragraph_keywords': list, 'slides': list}
+    structure_dict = {
+        "Header": str,
+        "Header_keywords": list,
+        "Paragraph_keywords": list,
+        "slides": list,
+    }
     for slide in chunks:
         # assert that each slide has a header, paragraph, and slide
         for struct in structure_dict.keys():
             # assert the field is present
-            assert struct in slide, f'{struct} should be in slide'
+            assert struct in slide, f"{struct} should be in slide"
             # assert the field is not None
-            assert slide[struct] is not None, f'{struct} in slide should not be none'
+            assert slide[struct] is not None, f"{struct} in slide should not be none"
             # assert the type is correct
-            assert type(slide[struct]) is structure_dict[struct], f'{struct} should be a {structure_dict[struct]}'
+            assert (
+                type(slide[struct]) is structure_dict[struct]
+            ), f"{struct} should be a {structure_dict[struct]}"
+
 
 def test_construct_search_query():
     """

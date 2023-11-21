@@ -28,6 +28,7 @@ of headers and paragraphs
 """
 
 import re
+import os
 import fitz
 from docx2pdf import convert
 
@@ -49,7 +50,7 @@ def extract_words(file: str) -> dict:
     doc_data["data"] = []
     for index, page in enumerate(document):
         page_data = {}
-        page_data["slide"] = index+1
+        page_data["slide"] = index +1
         page_data["blocks"] = []
         blocks = page.get_text("dict")["blocks"]
         for block in blocks:  # iterate through the text blocks
@@ -76,17 +77,7 @@ def extract_words_word(file: str) -> list:
 # Load word document
     # doc = aw.Document(file)
     # inputfile=file
-    outputfile = file[:-5]+".pdf"
-
-   # Save as PDF
-   # doc.save(outputfile)
-   # print(outputfile)
-   # Load word document
-   # doc = aw.Document(file)
-    # inputfile=file
-    # outputfile= file[:-5]+".pdf"
-
-    # convert(inputfile,outputfile)
+    outputfile = file[:-5] + ".pdf"
     return extract_words(outputfile)
 
 
