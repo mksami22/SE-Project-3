@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.11"
+  - "3.8"
 install:
   - pip install .
   - pip install -r requirements.txt
@@ -11,7 +11,7 @@ install:
 jobs:
   include:
     - name: project-1
-      python: "3.11"
+      python: "3.8"
 script:
   - python -m pytest -v test/
   - coverage run --source ./code/ -m pytest -v ./test/
