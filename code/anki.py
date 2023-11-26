@@ -84,5 +84,7 @@ def add_package(deck, output_fname):
     ------
     None
     """
+    relative_output_dir = '../output'
     dir_path = os.path.dirname(os.path.realpath(__file__))
+    dir_path = os.path.join(dir_path, relative_output_dir)
     genanki.Package(deck).write_to_file(f'{dir_path}/{output_fname}.apkg')
