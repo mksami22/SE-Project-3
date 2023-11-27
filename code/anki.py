@@ -187,5 +187,5 @@ def invoke(action, **params):
     if 'result' not in response:
         raise Exception('response is missing required result field')
     if response['error'] is not None:
-        raise Exception(response['error']) # *Line 18*
+        raise Exception(response['error'])
     return response
