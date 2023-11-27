@@ -183,16 +183,6 @@ We would be happy to receive contributions! If you'd like to, please go through 
 
 For any feedback, issues, or bug reports, please create an issue [here](https://github.com/tran4code/auto_anki/issues/new).
 
-## Future RoadMap
-
-#### Build a browser extension with the current functionality
-
-- A browser extension which will extract contents of the current webpage which the user is on and produce a new deck of anki cards based on the material.
-
-#### Improve word extraction logic
-
-- Currently Spacy is being used to extract noun phrases from each slide/page of the document. Then the high frequency noun phrases are calculated and used in the final search query. However this causes an issue when every slide has the document’s author name and email address listed. The author name is considered as a noun phrase, and since it appears on every slide has a high frequency, and thus appears on the final search query.
-
 ## Contact us(Contributors):
 
 We are here to support you. Feel free to email us with any question or bug reports. We try our best to reply as soon as possible.
