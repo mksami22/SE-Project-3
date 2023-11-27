@@ -31,6 +31,7 @@ import concurrent.futures
 
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages')
 
+
 def center_window(window):
     window.update_idletasks()
     width = window.winfo_width()
@@ -39,9 +40,11 @@ def center_window(window):
     y = (window.winfo_screenheight() // 2) - (height // 2)
     window.geometry('{}x{}+{}+{}'.format(width, height, x, y))
 
+
 def fullscreen_window(window):
     window.attributes('-fullscreen', True)
     center_window(window)
+
 
 def process_(file):
     lect_name = file.split("/")[-1].split(".")[0]
@@ -81,6 +84,8 @@ def process_(file):
     add_package(deck, lect_name)
 
 # Function for opening the file explorer window
+
+
 def browseFiles():
     file = filedialog.askopenfilename(parent=window, title="Choose a file", filetypes=[
                                       ("Doc file", "*.docx"), ("Pdf file", "*.pdf")])
@@ -91,6 +96,7 @@ def browseFiles():
     text_box.tag_add("center", 1.0, "end")
     text_box.pack(expand=True, fill='both')
     process_(file)
+
 
 window = Tk()
 window.title('Auto-Anki')
