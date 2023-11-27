@@ -59,8 +59,8 @@ def process_(file):
     keyword_data = wp.merge_slide_with_same_headers(keyword_data)
 
     keyword_data = wp.duplicate_word_removal(keyword_data)
-    search_query = wp.construct_search_query(
-        keyword_data)
+    search_query = wp.construct_search_query(keyword_data)
+
     if source_choice.get() == "Google":
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
             results = executor.map(get_people_also_ask_links, search_query[:3])
@@ -78,9 +78,9 @@ def process_(file):
                 question=f'{question}', answer=f'{answer}', curr_model=auto_anki_model)
             deck.add_note(qa)
 
-    add_package(deck, lect_name)# Your existing code for processing files
-    # Your existing code for processing files
+    add_package(deck, lect_name)
 
+# Function for opening the file explorer window
 def browseFiles():
     file = filedialog.askopenfilename(parent=window, title="Choose a file", filetypes=[
                                       ("Doc file", "*.docx"), ("Pdf file", "*.pdf")])
