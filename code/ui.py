@@ -36,6 +36,7 @@ sys.path.append('/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.
 MIN_WIDTH = 500
 MIN_HEIGHT = 800
 
+
 def center_window(window):
     window.update_idletasks()
     width = window.winfo_width()
