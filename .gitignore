@@ -208,3 +208,6 @@ fabric.properties
 
 # virtual environment directory
 myenv/
+
+# ignoring the output files
+output/
