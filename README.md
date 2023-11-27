@@ -3,17 +3,19 @@
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/SmayanaReddy/auto_anki)
 
 ![Github](https://img.shields.io/badge/language-python-red.svg)
-![Build Status](https://img.shields.io/badge/build-passing-green)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5745931.svg)](https://doi.org/10.5281/zenodo.5745931)
+[![Build](https://github.com/mksami22/SE-Project-3/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/mksami22/SE-Project-3/actions/workflows/python-app.yml)
+![GitHub issues](https://img.shields.io/github/issues-raw/mksami22/SE-Project-3)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/mksami22/SE-Project-3)
+
 ![codecov](https://img.shields.io/badge/codecov-85%25-green)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
-[![GitHub license](https://img.shields.io/github/license/tran4code/auto_anki)](https://github.com/tran4code/auto_anki/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/tran4code/auto_anki)](https://github.com/tran4code/auto_anki/issues)
-[![GitHub issues-closed](https://img.shields.io/github/issues-closed/tran4code/auto_anki)](https://github.com/tran4code/auto_anki/issues?q=is%3Aissue+is%3Aclosed)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/tran4code/auto_anki/pulls)
-![version](https://img.shields.io/badge/version-3.0-blue)
+[![GitHub license](https://img.shields.io/github/license/mksami22/SE-Project-3)](https://github.com/mksami22/SE-Project-3/blob/main/LICENSE)
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/mksami22/SE-Project-3/pulls)
+![version](https://img.shields.io/badge/version-4.0-blue)
 ![Test Cases](https://img.shields.io/badge/tests-passing-green)
 ![Test Cases](https://img.shields.io/badge/test%20cases-20-green)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5745931.svg)](https://doi.org/10.5281/zenodo.5745931)
 
 <!-- ![github workflow](https://github.com/tran4code/SRIJAS/actions/workflows/unit_test.yml/badge.svg)
 ![Flake8 Style Check](https://github.com/tran4code/auto_anki/actions/workflows/Flake8%20Style%20Check/badge.svg)
