@@ -6,7 +6,7 @@ We would like to thank you for showing interest in Auto Anki with ChatGPT. You a
 
 Each contribution counts for our project. So, make sure to classify which is yours.
 
-### **Reporting Bugs** 🐛
+### **Reporting Bugs** 
 
 This section guides you through submitting a bug report for this repository. Following these guidelines helps maintainers and the community understand your report 📝, reproduce the behavior 💻 💻, and find related reports 🔎.
 Before creating bug reports, please perform a cursory search to see if the problem has already been reported. If it has and the issue is still open, add a comment to the existing issue instead of opening a new one.
