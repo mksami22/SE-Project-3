@@ -111,6 +111,45 @@ individual, or aggression toward or disparagement of classes of individuals.
 
 **Consequence**: A permanent ban from any sort of public interaction within
 the community.
+## Support Email 
+
+**Auto-Anki Support Email -  📧 Support Email: autoankisuppport@gmail.com**
+
+Have a question, feedback, or need personalized assistance with Auto-Anki? 
+We're here to help! Our dedicated support email, autoankisuppport@gmail.com, 
+is your direct line to the Auto-Anki team. Here's what you can expect:
+
+**What We Can Assist With:**
+* Technical Issues: Encountering bugs, errors, or technical glitches? Share the details, 
+and we'll work to find a solution.
+* Usage Guidance: Need help navigating Auto-Anki's features? Ask for guidance on how to make the most 
+of your learning experience.
+* Feedback and Suggestions: Your thoughts matter! Share your feedback, suggestions, or ideas for 
+improving Auto-Anki. We value your input.
+* General Inquiries: Whether it's about the installation process, specific functionalities, or 
+any other general inquiry, drop us a line.
+* Contributor Queries: If you're interested in contributing to Auto-Anki or have questions about 
+the development process, feel free to reach out.
+
+**How to Reach Us:**
+
+* Compose an Email: Craft an email detailing your query or concern and send it to autoankisuppport@gmail.com.
+* Subject Line: For efficient handling, include a brief but descriptive subject line related to your inquiry.
+* Include Details: Provide as much detail as possible about the issue or question you're facing. Attach 
+relevant screenshots if applicable.
+* Response Time: Our team is dedicated to responding promptly. While response times may vary, be assured
+that we're working to address your queries in a timely manner.
+
+**We're Here to Assist You:**
+
+* Team Members: The Auto-Anki support team comprises individuals passionate about providing excellent user experiences. 
+* Collaborative Approach: We believe in a collaborative approach to problem-solving. Your insights 
+and experiences contribute to the ongoing improvement of Auto-Anki.
+* Community Support: The support email isn't just for individual queries; it's a space for community 
+support. If multiple users face similar challenges, we may address common themes in broader communications.
+
+## Support Server
+Join our Discord community for discussions, updates, and support: [![Join Auto-Anki Support](https://img.shields.io/discord/123456789012345678?color=7289DA&logo=discord&logoColor=white)](https://discord.gg/https://discord.gg/eWg5Cr4R)
 
 ## Attribution
 
