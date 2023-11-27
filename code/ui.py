@@ -28,9 +28,13 @@ from tkinter import *
 import sys
 import gpt_prompting as gp
 import concurrent.futures
+import pdfkit
+import time
 
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages')
 
+MIN_WIDTH = 500
+MIN_HEIGHT = 800
 
 def center_window(window):
     window.update_idletasks()
@@ -44,6 +48,18 @@ def center_window(window):
 def fullscreen_window(window):
     window.attributes('-fullscreen', True)
     center_window(window)
+
+
+def download_webpages():
+    url = url_entry.get()
+    url_parser = url.split(".")
+    config = pdfkit.configuration(wkhtmltopdf='/usr/local/bin/wkhtmltopdf')
+    filepath = 'data/'
+    filename = url_parser[1] + ".pdf"
+    pdfkit.from_url(url, (filepath +filename), configuration=config)
+    time.sleep(10)
+    file = os.getcwd() + '/data/' + filename
+    process_(file)
 
 
 def process_(file):
@@ -96,21 +112,23 @@ def process_(file):
 
 
 def browseFiles():
-    file = filedialog.askopenfilename(parent=window, title="Choose a file", filetypes=[
-                                      ("Doc file", "*.docx"), ("Pdf file", "*.pdf")])
+    files = filedialog.askopenfilenames(parent=window, title="Choose a file", filetypes=[
+        ("Doc file", "*.docx"), ("Pdf file", "*.pdf")])
 
     text_box = Text(window, height=10, width=50, padx=15, pady=15, font=("Futura", 25))
-    text_box.insert(1.0, file)
+    text_box.insert(1.0, files)
     text_box.tag_configure("center", justify="center")
     text_box.tag_add("center", 1.0, "end")
     text_box.pack(expand=True, fill='both')
-    process_(file)
+    for file in files:
+        process_(file)
+        time.sleep(5)
 
 
 window = Tk()
 window.title('Auto-Anki')
 fullscreen_window(window)
-
+window.minsize(MIN_WIDTH, MIN_HEIGHT)
 
 background_image = PhotoImage(file='code/anki_back.png') 
 background_label = Label(window, image=background_image,borderwidth=0)
@@ -121,20 +139,7 @@ logo_label = Label(window, image=logo, borderwidth=0)
 logo_label.image = logo
 logo_label.pack(expand=True)
 
-instructions = Label(
-    window, text="Select a PDF file on your computer", font=("Futura", 20), fg="black" , bg="#9FB4FF")
-instructions.pack(expand=True)
 
-button_explore = Button(window,
-                        text="Browse Files",
-                        command=browseFiles,
-                        font=("Futura", 15),
-                        bg="#4CAF50",
-                        fg="black",
-                        borderwidth=0,
-                        padx=20,
-                        pady=10)
-button_explore.pack(expand=True)
 
 source_choice = StringVar(window)
 sources = ["Google", "GPT"]
@@ -142,19 +147,50 @@ source_choice.set(sources[0])
 
 source_dropdown = OptionMenu(window, source_choice, *sources)
 source_dropdown_label = Label(
-    window, text="Choose an API source:", font=("Futura", 20),fg="black", bg="#9FB4FF")
+    window, text="Choose an API source:", font=("Futura", 15),fg="black", bg="#9FB4FF")
 source_dropdown_label.pack(expand=True)
 source_dropdown.pack(expand=True)
+instructions = Label(
+    window, text="Enter a URL", font=("Futura", 15), fg="black" , bg="#9FB4FF")
+instructions.pack(expand=True)
+url_entry = Entry(window, font=("Futura", 15))
+url_entry.pack(expand=True)
+submit_button = Button(window,
+                       text="Submit",
+                       command=download_webpages,
+                       font=("Futura", 13),
+                       bg="#4CAF50",
+                       fg="black",
+                       borderwidth=0,
+                       padx=10,
+                       pady=5)
+submit_button.pack(expand=True)
+instructions = Label(
+    window, text="OR", font=("Futura", 30), fg="white" , bg="#9FB4FF")
+instructions.pack(expand=True)
+instructions = Label(
+    window, text="Select a PDF file on your computer", font=("Futura", 15), fg="black" , bg="#9FB4FF")
+instructions.pack(expand=True)
 
+button_explore = Button(window,
+                        text="Browse Files",
+                        command=browseFiles,
+                        font=("Futura", 13),
+                        bg="#4CAF50",
+                        fg="black",
+                        borderwidth=0,
+                        padx=10,
+                        pady=5)
+button_explore.pack(expand=True)
 button_exit = Button(window,
                      text="Exit",
                      command=exit,
-                     font=("Futura", 15),
+                     font=("Futura", 13),
                      bg="#FF5733",
                      fg="black",
                      borderwidth=0,
-                     padx=20,
-                     pady=10)
+                     padx=10,
+                     pady=5)
 button_exit.pack(expand=True)
 
 window.mainloop()
