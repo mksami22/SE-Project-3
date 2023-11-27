@@ -28,6 +28,8 @@ from tkinter import *
 import sys
 import gpt_prompting as gp
 import concurrent.futures
+import pdfkit
+import time
 
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages')
 
@@ -44,6 +46,17 @@ def center_window(window):
 def fullscreen_window(window):
     window.attributes('-fullscreen', True)
     center_window(window)
+
+
+def download_webpages(url):
+    url_parser = url.split(".")
+    config = pdfkit.configuration(wkhtmltopdf='/usr/local/bin/wkhtmltopdf')
+    filepath = 'data/'
+    filename = url_parser[1] + ".pdf"
+    pdfkit.from_url(url, (filepath +filename), configuration=config)
+    time.sleep(10)
+    file = os.getcwd() + '/data/' + filename
+    process_(file)
 
 
 def process_(file):
