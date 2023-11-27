@@ -41,6 +41,7 @@ def center_window(window):
     window.geometry('{}x{}+{}+{}'.format(width, height, x, y))
 
 
+
 def fullscreen_window(window):
     window.attributes('-fullscreen', True)
     center_window(window)
