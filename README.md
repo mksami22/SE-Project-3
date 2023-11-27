@@ -65,33 +65,43 @@ Auto Anki 4.0 is here to enhance your study experience and empower your academic
 
 ## Quick Start
 
-Install Auto-Anki with ChatGPT, provide your study lectures or documents, and your APKG file will be ready! You can import it into the Anki application and dive into your materials. It's quick and easy peasy!
+Install Auto-Anki with ChatGPT, provide your study lectures or documents, and your APKG file will be ready! The flash decks will be autoloaded into your Anki application. It's quick and easy peasy!
 
 Here's a series of pictures to demonstrate the features we've added and how to use them:
 
 ### First Feature: Enhanced User Interface
 
-We've revamped the user interface and introduced a convenient drop-down menu, this was not available in the previous version. Also we improved overall appereance.
-
+We've revamped the user interface and improved the overall aesthetic of the home page. We have also added the support for viewing the application in full screen mode to provide better viewing experience. The UI also adapts to the appearance (light, dark mode) of the system.
 <img src="https://github.com/tran4code/auto_anki/assets/113017516/0f8d4620-e795-473e-ae37-15840db64b6e" width="400" />
 
-### Second Feature: ChatGPT Integration
+### Second Feature: Selection of multiple files
 
-To provide more accurate answers, we integrated the ChatGPT API. Now, users can generate highly precise flashcards with Auto-Anki powered by ChatGPT. In the [revious version they could only use google(people aslo asked answers) to generate flash cards.
+To provide more immersive experience to the application and avoiding revisits for generating flash decks for each document separately, we have added the support of generating decks for multiple files simultaneously. 
 
-When you run Auto-Anki, you'll be greeted by this user-friendly interface where you can choose between Google or ChatGPT to generate your flashcards.
+Users can select all the files at once to genearate the flash decks.
 
-<img src="https://github.com/tran4code/auto_anki/assets/113017516/ca20b1dd-9972-4af1-a883-a665f321b9b6" width="400" />
-
-<img src="https://github.com/tran4code/auto_anki/assets/113017516/ad87793c-fa1e-49f5-ab44-e0ee4bd871d1" width="400" />
-
-Here, you can upload your document:
+Here, you can upload a single document:
 
 <img src="https://github.com/tran4code/auto_anki/assets/113017516/bc38ce0a-c838-49f5-b125-57c9b46a8365" width="400" />
 
-It produces an APKG file, and with the Anki application, you can open it and enjoy a new and enhanced studying experience.
+You can also upload mutliple documents:
+
+<img src="https://github.com/tran4code/auto_anki/assets/113017516/bc38ce0a-c838-49f5-b125-57c9b46a8365" width="400" />
+
+### Third Feature: Generate flash decks from a website
+
+We have added the support to generate flash decks from any website on the internet. This enhances the overall use case of the application and improves the user experience.
+
+Just copy the URL of the website, paste it into the dedicated URL section in our application and Voila! your flash decks are ready!!
 
 <img src="https://github.com/tran4code/auto_anki/assets/113017516/a388c8f0-a4a6-486a-8495-d3f49be9042b" width="400" />
+
+### Fourth Feature: Integration with Anki Application
+
+Previously, users had to manually load the apkg file of the flash deck into a third party application. With this feature, we enabled the auto loading of the decks into the Anki Application. Say bye to the hassle of manually importing apkgs into a third party application. 
+
+<img src="https://github.com/tran4code/auto_anki/assets/113017516/a388c8f0-a4a6-486a-8495-d3f49be9042b" width="400" />
+
 
 ## Check out the video!
 
@@ -175,6 +185,7 @@ For checking code coverage,
 - For viewing the report run
   `coverage report`
 
+
 | Name              | Stmts | Miss | Cover |
 | ----------------- | ----- | ---- | ----- |
 | anki.py           | 14    | 3    | 83%   |
@@ -186,9 +197,9 @@ For checking code coverage,
 
 ## How to Contribute
 
-We would be happy to receive contributions! If you'd like to, please go through our [CONTRIBUTING.md](https://github.com/tran4code/auto_anki/blob/main/CONTRIBUTING.md).
+We would be happy to receive contributions! If you'd like to, please go through our [CONTRIBUTING.md](https://github.com/mksami22/SE-Project-3/blob/main/CONTRIBUTING.md).
 
-For any feedback, issues, or bug reports, please create an issue [here](https://github.com/tran4code/auto_anki/issues/new).
+For any feedback, issues, or bug reports, please create an issue [here](https://github.com/mksami22/SE-Project-3/issues/new).
 
 ## Contact us(Contributors):
 
@@ -272,8 +283,10 @@ Our project is currently not funded, and we operate on a volunteer and open-sour
 We have built this code on top of the stack from the project [
 ](https://github.com/tran4code/auto_anki)https://github.com/tran4code/auto_anki
 
+We have built the new features on top of the existing work developed by Keith Tran et al. [https://github.com/tran4code/auto_anki]
+
 ## Recommended citation
 
 You can cite us like this:
 
-Auto-Anki with ChatGPT. Version 1.0. Keith Tran,Benyamin Tabarsi, Kimia Fazeli, Mohammed Fazian. 2023. [https://github.com/tran4code/auto_anki]
+Auto-Anki with ChatGPT. Version 2.0. 
