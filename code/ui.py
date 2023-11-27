@@ -69,17 +69,26 @@ def process_(file):
             results = executor.map(get_people_also_ask_links, search_query[:3])
     elif source_choice.get() == "GPT":
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-            results = executor.map(gp.get_gpt_answers, search_query[:3])
+            results = gp.get_gpt_answers(search_query[:3])
 
     auto_anki_model = get_model()
     deck = get_deck(deck_name=lect_name)
     for result in results:
-        for qapair in result:
-            question = qapair["Question"]
-            answer = qapair["Answer"]
+        try:
+            question = result["Question"]
+            answer = result["Answer"]
             qa = add_question(
                 question=f'{question}', answer=f'{answer}', curr_model=auto_anki_model)
             deck.add_note(qa)
+        except KeyError as e:
+            # Handle the case where "Question" or "Answer" keys are missing in a dictionary
+            print(f"KeyError: {e}")
+            continue
+        except Exception as e:
+            # Handle other exceptions
+            print(f"An error occurred: {e}")
+            continue
+
 
     add_package(deck, lect_name)
 
