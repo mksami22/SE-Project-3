@@ -23,6 +23,9 @@
 
 import genanki
 import os
+import requests
+import json
+import urllib.request
 
 
 def get_model():
@@ -88,3 +91,101 @@ def add_package(deck, output_fname):
     dir_path = os.path.dirname(os.path.realpath(__file__))
     dir_path = os.path.join(dir_path, relative_output_dir)
     genanki.Package(deck).write_to_file(f'{dir_path}/{output_fname}.apkg')
+    add_flashcards(deck, output_fname)
+    
+
+def add_flashcards(deck, output_fname):
+    
+    deck_name = deck.name
+    invoke('createDeck', deck=deck_name)
+    deck_notes = deck.notes
+    notes_data_ll = [note.fields for note in deck_notes]
+    for note in notes_data_ll:
+        my_note = {
+            "deckName": deck_name,
+            "modelName": "Basic",
+            "fields": {
+                "Front": str(note[0]),
+                "Back": str(note[1]),
+            },
+            "options": {
+                "allowDuplicate": False
+            },
+            "tags": ['tester']
+        }
+        invoke('addNote', note=my_note)
+    
+
+def get_deck_names():
+    anki_url = "http://localhost:8765"
+    endpoint = "/invoke"
+    action = "deckNames"
+
+    data = {
+        "action": action,
+        "version": 6,
+    }
+
+    response = requests.post(anki_url + endpoint, json=data)
+    result = response.json()
+
+    return result
+
+
+def create_deck(deck_name):
+    anki_url = "http://localhost:8765"
+    endpoint = "/invoke"
+    action = "createDeck"
+
+    data = {
+        "action": action,
+        "version": 6,
+        "params": {
+            "deck": deck_name,
+        },
+    }
+
+    response = requests.post(anki_url + endpoint, json=data)
+    result = response.json()
+
+    return result
+
+
+def add_note(deck_name, question, answer):
+    anki_url = "http://localhost:8765"
+    endpoint = "/invoke"
+    action = "addNote"
+
+    # Convert Deck notes to a list of dictionaries
+    notes_data = [{"deckName": deck_name, "modelName": "Basic", "fields": {"Front": question, "Back": answer}}]
+
+    data = {
+        "action": action,
+        "version": 6,
+        "params": {
+            "notes": notes_data,
+        },
+    }
+
+    response = requests.post(anki_url + endpoint, json=data)
+    result = response.json()
+
+    return result
+
+
+def request(action, **params):
+    return {'action': action, 'params': params, 'version': 6}
+
+
+def invoke(action, **params):
+    requestJson = json.dumps(request(action, **params)).encode('utf-8')
+    response = json.load(urllib.request.urlopen(urllib.request.Request('http://localhost:8765', requestJson)))
+    if len(response) != 2:
+        raise Exception('response has an unexpected number of fields')
+    if 'error' not in response:
+        raise Exception('response is missing required error field')
+    if 'result' not in response:
+        raise Exception('response is missing required result field')
+    if response['error'] is not None:
+        raise Exception(response['error']) # *Line 18*
+    return response
