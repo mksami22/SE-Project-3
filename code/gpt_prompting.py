@@ -25,6 +25,7 @@
 from langchain.llms import OpenAI
 from dotenv import load_dotenv
 import os
+import json
 
 
 def get_gpt_answers(search_term: str) -> list:
@@ -39,7 +40,7 @@ def get_gpt_answers(search_term: str) -> list:
     load_dotenv()
     API_KEY = os.environ["API_KEY"]
     llm = OpenAI(openai_api_key=API_KEY)
-    text = "Can you create 3 anki cards on topic of" + search_term + "?"
+    text = "Can you create 3 anki cards on topic of" + str(search_term) + "?"
     dictionary_requirement = (
         "Generate the anki cards in the following format. I will provide an example below. Make sure to have contain in the brackets '[]' "
         "[{'Question': 'What do principal components mean?', 'Answer': 'Principal components "
@@ -55,7 +56,9 @@ def get_gpt_answers(search_term: str) -> list:
         "(called the first principal component), the second greatest variance on the second coordinate, and so on.'}] "
     )
     chatgpt_prompt = text + dictionary_requirement
-    return llm.predict(chatgpt_prompt)
+    result = llm.predict(chatgpt_prompt)
+    result_list = json.loads(result.replace("'", "\""))
+    return result_list
 
 
 # def get_people_also_ask_links(search_term: str) -> list:
