@@ -99,27 +99,34 @@ https://github.com/tran4code/auto_anki/assets/113017516/ab847e56-d290-4faf-9db6-
 
 # Successful usecases
 
-🎉️ Case study : Kimia
+🎉️ Case study : Master's Student
 
-Background: Student majoring in Computer Science
+User: Kanchana
 
-Scenario:
-
-- Kimia was struggling with managing large amounts of information from complex textbooks.
-- Kimia started using Auto-Anki with ChatGPT to extract key content from PDF textbooks and create flashcards automatically.
-- Result: Kimia noticed a significant improvement in her ability to absorb and retain information. Kimia achieved a good grade in her Software Engineering midterm exam and now has more free time for other activities.
-
-🎉️ Case Study: Language Learning
-
-User: Mohammed
-
-Background: Language Enthusiast
+Background: Student majoring in Electrical and Computer Engineering
 
 Scenario:
 
-- Mohammed was passionate about learning new languages and wanted to create flashcards to improve his vocabulary.
-- He used Auto-Anki with ChatGPT to extract phrases and sentences from Spanish language textbooks and websites.
-- Result: Mohammed could expand his vocabulary and language skills in only 2 weeks that he has used Auto-Anki, making his conversations more fluent and enjoyable.
+- Kanchana was struggling with managing large amounts of information from complex textbooks.
+- Kanchana started using Auto-Anki with ChatGPT to extract key content from PDF textbooks and create flashcards automatically.
+- Result: Kanchana noticed a significant improvement in her ability to absorb and retain information. Kanchana achieved a good grade in her Software Engineering midterm exam and now has more free time for other activities.
+
+🎉️ Case Study: Aspiring International Master's Student
+
+User: Jamatis
+
+Background: Undergraduate Engineering Student
+
+Scenario:
+
+- Jamatis, an engineer from Jamaica, aimed to pursue his Masters in CS at NC State University.
+- Using Auto-Anki, he focused on creating flashcards for his TOEFL English Vocabulary test.
+- The flashcards facilitated effective revision and application of learned words in sentences.
+- Result: Jamatis successfully cleared the TOEFL test with flying colors and he secured admission to NC State University for the spring semester.
+
+
+
+
 
 # Installation
 
@@ -187,10 +194,10 @@ For any feedback, issues, or bug reports, please create an issue [here](https://
 
 We are here to support you. Feel free to email us with any question or bug reports. We try our best to reply as soon as possible.
 
-- Keith Tran (ktran24@ncsu.edu)
-- Benyamin Tabarsi(btaghiz@ncsu.edu)
-- Kimia Fazeli(kfazeli@ncsu.edu)
-- Mohammed Faizan (mfaizan@ncsu.edu)
+- Mohammed Sami MK (mamk@ncsu.edu)
+- Mushtaq Ahmed(mshaikh2@ncsu.edu)
+- Unnati Bukhariya(ubukhar1@ncsu.edu)
+- Brian Buchsbaum (bdbuchsb@ncsu.edu)
 
 ## Project's funding
 
