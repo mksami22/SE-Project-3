@@ -28,6 +28,7 @@ from tkinter import *
 import sys
 import gpt_prompting as gp
 import concurrent.futures
+import time
 
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages')
 
@@ -96,15 +97,17 @@ def process_(file):
 
 
 def browseFiles():
-    file = filedialog.askopenfilename(parent=window, title="Choose a file", filetypes=[
-                                      ("Doc file", "*.docx"), ("Pdf file", "*.pdf")])
+    files = filedialog.askopenfilenames(parent=window, title="Choose a file", filetypes=[
+        ("Doc file", "*.docx"), ("Pdf file", "*.pdf")])
 
     text_box = Text(window, height=10, width=50, padx=15, pady=15, font=("Futura", 25))
-    text_box.insert(1.0, file)
+    text_box.insert(1.0, files)
     text_box.tag_configure("center", justify="center")
     text_box.tag_add("center", 1.0, "end")
     text_box.pack(expand=True, fill='both')
-    process_(file)
+    for file in files:
+        process_(file)
+        time.sleep(5)
 
 
 window = Tk()
