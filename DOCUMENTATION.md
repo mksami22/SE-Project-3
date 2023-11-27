@@ -31,3 +31,9 @@ We significantly improved the test coverage from 64% to 96%. To improve the cove
 ### Improved Documentation
 
 We generated the code documentation using a new format called Pycco. We also revamped the readme and other docs for better readability and user experience.
+
+# Troubleshooting
+
+- Check the version of genanki (should be 0.13.0), will encounter errors otherwise
+- Check that the Python version is at least 3.10.0
+- If you continue to encounter errors, check out the Requirements file and join the community discord for assistance.

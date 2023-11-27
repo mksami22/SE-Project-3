@@ -124,10 +124,6 @@ Scenario:
 - The flashcards facilitated effective revision and application of learned words in sentences.
 - Result: Jamatis successfully cleared the TOEFL test with flying colors and he secured admission to NC State University for the spring semester.
 
-
-
-
-
 # Installation
 
 1. Clone the repository
@@ -144,11 +140,12 @@ Scenario:
 5. Install the project as a Python package:
    `pip install .`
 6. Clone the Anki library
-   `git clone https://github.com/kerrickstaley/genanki`
+   `git clone https://github.com/kerrickstaley/genanki --branch 0.13.0`
+   - **Note**: Requires version 0.13.0, do not clone latest verision of genanki.
 7. Navigate into the cloned directory:
    `cd genanki`
 8. Install the Anki library
-   ` python setup.py install`
+   `python setup.py install`
 9. The command to run the project is:
    `python3 code/ui.py`
 
