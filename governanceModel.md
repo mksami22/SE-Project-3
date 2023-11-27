@@ -1,9 +1,9 @@
 1. Core Contributors:
 
-* Keith Tran (ktran24@ncsu.edu)
-* Benyamin Tabarsi(btaghiz@ncsu.edu)
-* Kimia Fazeli(kfazeli@ncsu.edu)
-* Mohammed Faizan (mfaizan@ncsu.edu)
+- Mohammed Sami MK (mamk@ncsu.edu)
+- Mushtaq Ahmed(mshaikh2@ncsu.edu)
+- Unnati Bukhariya(ubukhar2@ncsu.edu)
+- Brian Buchsbaum (bdbuchsb@ncsu.edu)
 
 2. Decision-Making:
 * Major decisions related to project direction, features, and releases will be made by consensus among the core contributors.
