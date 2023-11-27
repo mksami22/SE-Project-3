@@ -10,4 +10,4 @@ Python is a powerful programming language that allows users to work quickly and 
 
 ## OpenAI API
 
-The OpenAI API provides a simple interface that makes applications intelligent. Auto Anki users can set the API_KEY in the .env file in the root directory of the project. 
+The OpenAI API provides a simple interface that makes applications intelligent. Auto Anki users can set the API_KEY in the .env file in the root directory of the project. **Note:** Users will need to create the .env file and set their own API key inside. Remember that your API key is a secret! Do not share it with others. The API key can be set up by following the instructions found [here](https://platform.openai.com/docs/quickstart?context=python).

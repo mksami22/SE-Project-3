@@ -149,6 +149,8 @@ Scenario:
 9. The command to run the project is:
    `python3 code/ui.py`
 
+- For further help with installation, check out the documentation and requirements files, or join the community discord.
+
 ## Code Documentation
 
 Documentation of the entire codebase is generated using [Pycco](https://github.com/pycco-docs/pycco).
