@@ -14,12 +14,11 @@
 ![version](https://img.shields.io/badge/version-3.0-blue)
 ![Test Cases](https://img.shields.io/badge/tests-passing-green)
 ![Test Cases](https://img.shields.io/badge/test%20cases-20-green)
+
 <!-- ![github workflow](https://github.com/tran4code/SRIJAS/actions/workflows/unit_test.yml/badge.svg)
 ![Flake8 Style Check](https://github.com/tran4code/auto_anki/actions/workflows/Flake8%20Style%20Check/badge.svg)
 ![github workflow](https://github.com/tran4code/SRIJAS/actions/workflows/main.yml/badge.svg)
 ![github workflow](https://github.com/tran4code/SRIJAS/actions/workflows/code_cov.yml/badge.svg) -->
-
-
 
 ## [Click here to see Auto Anki's Demo video](https://youtu.be/hLsI2FBElr0)
 
@@ -46,7 +45,7 @@
 
 Auto Anki revolutionizes your learning experience by effortlessly transforming your lecture materials into highly accurate and effective flashcards. This version of Auto Anki incorporates the advanced capabilities of ChatGPT 4, ensuring precision and relevance in every flashcard.
 
-Auto Anki, building upon the intelligent Anki flashcard platform [Anki](https://apps.ankiweb.net/)  , generates flashcards from your lectures, making studying a breeze. It's the perfect tool for anyone who struggles to memorize class concepts, faces revision challenges, or simply prefers a more convenient note-taking approach.
+Auto Anki, building upon the intelligent Anki flashcard platform [Anki](https://apps.ankiweb.net/) , generates flashcards from your lectures, making studying a breeze. It's the perfect tool for anyone who struggles to memorize class concepts, faces revision challenges, or simply prefers a more convenient note-taking approach.
 
 ## Here's what Auto Anki with ChatGPT 4 can do for you:
 
@@ -63,18 +62,20 @@ Create straightforward flashcards for effortless memorization and revision.
 Auto Anki 4.0 is here to enhance your study experience and empower your academic success! 😊
 
 ## Quick Start
+
 Install Auto-Anki with ChatGPT, provide your study lectures or documents, and your APKG file will be ready! You can import it into the Anki application and dive into your materials. It's quick and easy peasy!
 
 Here's a series of pictures to demonstrate the features we've added and how to use them:
 
 ### First Feature: Enhanced User Interface
+
 We've revamped the user interface and introduced a convenient drop-down menu, this was not available in the previous version. Also we improved overall appereance.
 
 <img src="https://github.com/tran4code/auto_anki/assets/113017516/0f8d4620-e795-473e-ae37-15840db64b6e" width="400" />
 
 ### Second Feature: ChatGPT Integration
-To provide more accurate answers, we integrated the ChatGPT API. Now, users can generate highly precise flashcards with Auto-Anki powered by ChatGPT. In the [revious version they could only use google(people aslo asked answers) to generate flash cards.
 
+To provide more accurate answers, we integrated the ChatGPT API. Now, users can generate highly precise flashcards with Auto-Anki powered by ChatGPT. In the [revious version they could only use google(people aslo asked answers) to generate flash cards.
 
 When you run Auto-Anki, you'll be greeted by this user-friendly interface where you can choose between Google or ChatGPT to generate your flashcards.
 
@@ -102,9 +103,9 @@ Background: Student majoring in Computer Science
 
 Scenario:
 
-* Kimia was struggling with managing large amounts of information from complex textbooks.
-* Kimia started using Auto-Anki with ChatGPT to extract key content from PDF textbooks and create flashcards automatically.
-* Result: Kimia noticed a significant improvement in her ability to absorb and retain information. Kimia achieved a good grade in her Software Engineering midterm exam and now has more free time for other activities.
+- Kimia was struggling with managing large amounts of information from complex textbooks.
+- Kimia started using Auto-Anki with ChatGPT to extract key content from PDF textbooks and create flashcards automatically.
+- Result: Kimia noticed a significant improvement in her ability to absorb and retain information. Kimia achieved a good grade in her Software Engineering midterm exam and now has more free time for other activities.
 
 🎉️ Case Study: Language Learning
 
@@ -114,35 +115,34 @@ Background: Language Enthusiast
 
 Scenario:
 
-* Mohammed was passionate about learning new languages and wanted to create flashcards to improve his vocabulary.
-* He used Auto-Anki with ChatGPT to extract phrases and sentences from Spanish language textbooks and websites.
-* Result: Mohammed  could expand his vocabulary and language skills in only 2 weeks that he has used Auto-Anki, making his conversations more fluent and enjoyable.
+- Mohammed was passionate about learning new languages and wanted to create flashcards to improve his vocabulary.
+- He used Auto-Anki with ChatGPT to extract phrases and sentences from Spanish language textbooks and websites.
+- Result: Mohammed could expand his vocabulary and language skills in only 2 weeks that he has used Auto-Anki, making his conversations more fluent and enjoyable.
 
 # Installation
 
 1. Clone the repository
-`git clone https://github.com/tran4code/auto_anki`
+   `git clone https://github.com/tran4code/auto_anki`
 2. Set up a virtual environment (Optional, but highly recommended):
-    - Create the virtual environment:
-    ``python -m venv myenv``
-    -  Activate the virtual environment: ``source myenv/bin/activate``.
-    - **Note**: In future runs, you won't need to create the virtual environment again, just activate it.
+   - Create the virtual environment:
+     `python -m venv myenv`
+   - Activate the virtual environment: `source myenv/bin/activate`.
+   - **Note**: In future runs, you won't need to create the virtual environment again, just activate it.
 3. Install all required packages:
-  `pip install -r requirements.txt`
+   `pip install -r requirements.txt`
 4. Download a required model:
-  `python -m spacy download en_core_web_lg`
+   `python -m spacy download en_core_web_lg`
 5. Install the project as a Python package:
-  `pip install .`
+   `pip install .`
 6. Clone the Anki library
-  `git clone https://github.com/kerrickstaley/genanki` 
+   `git clone https://github.com/kerrickstaley/genanki`
 7. Navigate into the cloned directory:
-  `cd genanki`
+   `cd genanki`
 8. Install the Anki library
-  ` python setup.py install`
+   ` python setup.py install`
 9. The command to run the project is:
- `python3 code/ui.py`
+   `python3 code/ui.py`
 
-    
 ## Code Documentation
 
 Documentation of the entire codebase is generated using [Pycco](https://github.com/pycco-docs/pycco).
@@ -166,9 +166,8 @@ For checking code coverage,
 - For viewing the report run
   `coverage report`
 
-
 | Name              | Stmts | Miss | Cover |
-| ------------------- | ------- | ------ | ------- |
+| ----------------- | ----- | ---- | ----- |
 | anki.py           | 14    | 3    | 83%   |
 | extract_sizes.py  | 55    | 6    | 89%   |
 | google_search.py  | 13    | 2    | 87%   |
@@ -182,25 +181,14 @@ We would be happy to receive contributions! If you'd like to, please go through 
 
 For any feedback, issues, or bug reports, please create an issue [here](https://github.com/tran4code/auto_anki/issues/new).
 
-## Future RoadMap
-
-#### Build a browser extension with the current functionality
-
-- A browser extension which will extract contents of the current webpage which the user is on and produce a new deck of anki cards based on the material.
-
-#### Improve word extraction logic
-
-- Currently Spacy is being used to extract noun phrases from each slide/page of the document. Then the high frequency noun phrases are calculated and used in the final search query. However this causes an issue when every slide has the document’s author name and email address listed. The author name is considered as a noun phrase, and since it appears on every slide has a high frequency, and thus appears on the final search query.
-
-
 ## Contact us(Contributors):
 
 We are here to support you. Feel free to email us with any question or bug reports. We try our best to reply as soon as possible.
 
-* Keith Tran (ktran24@ncsu.edu)
-* Benyamin Tabarsi(btaghiz@ncsu.edu)
-* Kimia Fazeli(kfazeli@ncsu.edu)
-* Mohammed Faizan (mfaizan@ncsu.edu)
+- Keith Tran (ktran24@ncsu.edu)
+- Benyamin Tabarsi(btaghiz@ncsu.edu)
+- Kimia Fazeli(kfazeli@ncsu.edu)
+- Mohammed Faizan (mfaizan@ncsu.edu)
 
 ## Project's funding
 
