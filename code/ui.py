@@ -36,7 +36,6 @@ sys.path.append(
 
 
 def process_(file):
-
     lect_name = file.split("/")[-1].split(".")[0]
 
     if file.split("/")[-1].split(".")[1] == "pdf":
@@ -52,12 +51,10 @@ def process_(file):
     keyword_data = wp.merge_slide_with_same_headers(keyword_data)
 
     keyword_data = wp.duplicate_word_removal(keyword_data)
-    search_query = wp.construct_search_query(
-        keyword_data)
+    search_query = wp.construct_search_query(keyword_data)
+
     if source_choice.get() == "Google":
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-            # when testing use searchquery[:10 or less].
-            # Still working on better threading to get faster results
             results = executor.map(get_people_also_ask_links, search_query[:3])
     elif source_choice.get() == "GPT":
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
@@ -75,12 +72,9 @@ def process_(file):
 
     add_package(deck, lect_name)
 
-# Function for opening the
-# file explorer window
 
-
+# Function for opening the file explorer window
 def browseFiles():
-    # file = filedialog.askopenfilename(initialdir="/",title="Select a File",filetypes=(("Text files","*.txt*"),("all files","*.*")))
     file = filedialog.askopenfilename(parent=window, title="Choose a file", filetypes=[
                                       ("Doc file", "*.docx"), ("Pdf file", "*.pdf")])
 
