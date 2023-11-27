@@ -25,18 +25,25 @@ from PIL import ImageTk
 from user_cli import *
 from tkinter import filedialog
 from tkinter import *
-from docx2pdf import convert
 import sys
 import gpt_prompting as gp
+import concurrent.futures
 
-sys.path.append(
-    '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages')
+sys.path.append('/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages')
 
-# import filedialog module
+def center_window(window):
+    window.update_idletasks()
+    width = window.winfo_width()
+    height = window.winfo_height()
+    x = (window.winfo_screenwidth() // 2) - (width // 2)
+    y = (window.winfo_screenheight() // 2) - (height // 2)
+    window.geometry('{}x{}+{}+{}'.format(width, height, x, y))
 
+def fullscreen_window(window):
+    window.attributes('-fullscreen', True)
+    center_window(window)
 
 def process_(file):
-
     lect_name = file.split("/")[-1].split(".")[0]
 
     if file.split("/")[-1].split(".")[1] == "pdf":
@@ -56,8 +63,6 @@ def process_(file):
         keyword_data)
     if source_choice.get() == "Google":
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-            # when testing use searchquery[:10 or less].
-            # Still working on better threading to get faster results
             results = executor.map(get_people_also_ask_links, search_query[:3])
     elif source_choice.get() == "GPT":
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
@@ -73,71 +78,68 @@ def process_(file):
                 question=f'{question}', answer=f'{answer}', curr_model=auto_anki_model)
             deck.add_note(qa)
 
-    add_package(deck, lect_name)
-
-# Function for opening the
-# file explorer window
-
+    add_package(deck, lect_name)# Your existing code for processing files
+    # Your existing code for processing files
 
 def browseFiles():
-    # file = filedialog.askopenfilename(initialdir="/",title="Select a File",filetypes=(("Text files","*.txt*"),("all files","*.*")))
     file = filedialog.askopenfilename(parent=window, title="Choose a file", filetypes=[
                                       ("Doc file", "*.docx"), ("Pdf file", "*.pdf")])
 
-    # Change label contents
-    text_box = Text(window, height=10, width=50, padx=15, pady=15)
+    text_box = Text(window, height=10, width=50, padx=15, pady=15, font=("Futura", 25))
     text_box.insert(1.0, file)
     text_box.tag_configure("center", justify="center")
     text_box.tag_add("center", 1.0, "end")
-    text_box.grid(column=0, row=3)
+    text_box.pack(expand=True, fill='both')
     process_(file)
 
-
-# Create the root window
 window = Tk()
-# window.minsize(width=450, height=450)
-window.config(background="#ebeceb")
-
-canvas = Canvas(width=600, height=400)
-canvas.grid(columnspan=2, rowspan=4)
-# Set window title
 window.title('Auto-Anki')
+fullscreen_window(window)
 
-# Set window size
-window.geometry("500x500")
 
-# set logo
-logo = ImageTk.PhotoImage(file='code/Auto_Anki_Logo.jpg')
-logo_label = Label(image=logo)
+background_image = PhotoImage(file='code/anki_back.png') 
+background_label = Label(window, image=background_image,borderwidth=0)
+background_label.place(relwidth=1, relheight=1)
+
+logo = ImageTk.PhotoImage(file='code/logo.png')
+logo_label = Label(window, image=logo, borderwidth=0)
 logo_label.image = logo
-logo_label.grid(column=0, row=0)
+logo_label.pack(expand=True)
 
 instructions = Label(
-    window, text="Select a PDF file on your computer", font="Raleway")
-instructions.grid(column=0, row=1)
+    window, text="Select a PDF file on your computer", font=("Futura", 20), fg="black" , bg="#9FB4FF")
+instructions.pack(expand=True)
 
 button_explore = Button(window,
                         text="Browse Files",
-                        command=browseFiles)
+                        command=browseFiles,
+                        font=("Futura", 15),
+                        bg="#4CAF50",
+                        fg="black",
+                        borderwidth=0,
+                        padx=20,
+                        pady=10)
+button_explore.pack(expand=True)
 
-source_choice = StringVar(window)  # Variable to hold the choice
-sources = ["Google", "GPT"]  # List of choices
-source_choice.set(sources[0])  # Set default value to Google
+source_choice = StringVar(window)
+sources = ["Google", "GPT"]
+source_choice.set(sources[0])
 
 source_dropdown = OptionMenu(window, source_choice, *sources)
 source_dropdown_label = Label(
-    window, text="Choose an API source:", font="Raleway")
-
-source_dropdown_label.grid(column=0, row=2)
-source_dropdown.grid(column=0, row=3)
-
+    window, text="Choose an API source:", font=("Futura", 20),fg="black", bg="#9FB4FF")
+source_dropdown_label.pack(expand=True)
+source_dropdown.pack(expand=True)
 
 button_exit = Button(window,
                      text="Exit",
-                     command=exit)
+                     command=exit,
+                     font=("Futura", 15),
+                     bg="#FF5733",
+                     fg="black",
+                     borderwidth=0,
+                     padx=20,
+                     pady=10)
+button_exit.pack(expand=True)
 
-button_explore.grid(column=0, row=4)
-button_exit.grid(column=0, row=5)
-
-# Let the window wait for any events
 window.mainloop()
