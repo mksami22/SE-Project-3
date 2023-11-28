@@ -103,8 +103,9 @@ Previously, users had to manually load the apkg file of the flash deck into a th
 <img src="images/5.png" width="400" />
 
 ## Check out the video!
+[Youtube Video](https://youtu.be/FwqogUaTo-s)  
+[Implementation Demo](https://youtu.be/zZl59TlN048?feature=shared)
 
-https://github.com/tran4code/auto_anki/assets/113017516/ab847e56-d290-4faf-9db6-d9967bc955d3
 
 # Successful usecases
 
