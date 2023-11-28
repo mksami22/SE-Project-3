@@ -191,6 +191,11 @@ For checking code coverage,
 | wordprocessing.py | 125   | 23   | 81%   |
 | TOTAL             | 260   | 57   | 85%   |
 
+# Troubleshooting 
+- Check the version of genanki (should be 0.13.0), will encounter errors otherwise
+- Check that the Python version is at least 3.10.0
+- If you continue to encounter errors, check out the Requirements file and join the community discord for assistance.
+
 ## How to Contribute
 
 We would be happy to receive contributions! If you'd like to, please go through our [CONTRIBUTING.md](https://github.com/mksami22/SE-Project-3/blob/main/CONTRIBUTING.md).
@@ -205,6 +210,8 @@ We are here to support you. Feel free to email us with any question or bug repor
 - Mushtaq Ahmed(mshaikh2@ncsu.edu)
 - Unnati Bukhariya(ubukhar1@ncsu.edu)
 - Brian Buchsbaum (bdbuchsb@ncsu.edu)
+
+
 
 ## Community Support
 
@@ -263,6 +270,7 @@ is your direct line to the Auto-Anki team. Here's what you can expect:
   relevant screenshots if applicable.
 - Response Time: Our team is dedicated to responding promptly. While response times may vary, be assured
   that we're working to address your queries in a timely manner.
+  
 
 **We're Here to Assist You:**
 
