@@ -35,7 +35,6 @@
     <li><a href="#installation">Installation</a></li>
     <li><a href="#code-documentation">Code Documentation</a></li>
     <li><a href="#how-to-contribute">How to Contribute</a></li>
-    <li><a href="#future-roadmap">Future RoadMap</a></li>
    <li><a href="#contributors">Contact us(Contributors)</a></li>
     <li><a href="#Funding">Project's Funding</a></li>
    <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -104,11 +103,7 @@ Previously, users had to manually load the apkg file of the flash deck into a th
 
 ## Check out the video!
 
-
-
 https://github.com/mksami22/SE-Project-3/assets/72796509/44f1f799-325c-45d5-84d6-54120bf77301
-
-
 
 # Successful usecases
 
