@@ -34,6 +34,7 @@
     <li><a href="#Sucessful-usecases">Sucessful usecases</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#code-documentation">Code Documentation</a></li>
+    <li><a href="#troublshooting">Troubleshooting</a></li>
     <li><a href="#how-to-contribute">How to Contribute</a></li>
    <li><a href="#contributors">Contact us(Contributors)</a></li>
     <li><a href="#Funding">Project's Funding</a></li>
