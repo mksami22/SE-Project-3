@@ -71,22 +71,22 @@ Here's a series of pictures to demonstrate the features we've added and how to u
 
 ### First Feature: Enhanced User Interface
 
-We've revamped the user interface and improved the overall aesthetic of the home page. We have also added the support for viewing the application in full screen mode to provide better viewing experience. The UI also adapts to the appearance (light, dark mode) of the system.
-<img src="https://github.com/tran4code/auto_anki/assets/113017516/0f8d4620-e795-473e-ae37-15840db64b6e" width="400" />
+We've revamped the user interface and improved the overall aesthetic of the home page. We have also added the support for viewing the application in full screen mode to provide better viewing experience. The UI also adapts to the appearance (light, dark mode) of the system.  
+<img src="images/1.png" width="400" />
 
 ### Second Feature: Selection of multiple files
 
-To provide more immersive experience to the application and avoiding revisits for generating flash decks for each document separately, we have added the support of generating decks for multiple files simultaneously. 
+To provide more immersive experience to the application and avoiding revisits for generating flash decks for each document separately, we have added the support of generating decks for multiple files simultaneously.
 
 Users can select all the files at once to genearate the flash decks.
 
 Here, you can upload a single document:
 
-<img src="https://github.com/tran4code/auto_anki/assets/113017516/bc38ce0a-c838-49f5-b125-57c9b46a8365" width="400" />
+<img src="images/2.png" width="400" />
 
 You can also upload mutliple documents:
 
-<img src="https://github.com/tran4code/auto_anki/assets/113017516/bc38ce0a-c838-49f5-b125-57c9b46a8365" width="400" />
+<img src="images/3.png" width="400" />
 
 ### Third Feature: Generate flash decks from a website
 
@@ -94,14 +94,13 @@ We have added the support to generate flash decks from any website on the intern
 
 Just copy the URL of the website, paste it into the dedicated URL section in our application and Voila! your flash decks are ready!!
 
-<img src="https://github.com/tran4code/auto_anki/assets/113017516/a388c8f0-a4a6-486a-8495-d3f49be9042b" width="400" />
+<img src="images/4.png" width="400" />
 
 ### Fourth Feature: Integration with Anki Application
 
-Previously, users had to manually load the apkg file of the flash deck into a third party application. With this feature, we enabled the auto loading of the decks into the Anki Application. Say bye to the hassle of manually importing apkgs into a third party application. 
+Previously, users had to manually load the apkg file of the flash deck into a third party application. With this feature, we enabled the auto loading of the decks into the Anki Application. Say bye to the hassle of manually importing apkgs into a third party application.
 
-<img src="https://github.com/tran4code/auto_anki/assets/113017516/a388c8f0-a4a6-486a-8495-d3f49be9042b" width="400" />
-
+<img src="images/5.png" width="400" />
 
 ## Check out the video!
 
@@ -184,7 +183,6 @@ For checking code coverage,
 - For viewing the report run
   `coverage report`
 
-
 | Name              | Stmts | Miss | Cover |
 | ----------------- | ----- | ---- | ----- |
 | anki.py           | 14    | 3    | 83%   |
@@ -237,42 +235,44 @@ Join our [Discord server](https://discord.gg/fXzv86wJ) to connect with the Auto-
 - **Contributor:** Granted to contributors with valuable contributions.
 - **Moderator:** Discord moderators responsible for enforcing rules.
 
-### Support Email 
+### Support Email
 
-**Auto-Anki Support Email -  📧 Support Email: autoankisuppport@gmail.com**
+**Auto-Anki Support Email - 📧 Support Email: autoankisuppport@gmail.com**
 
-Have a question, feedback, or need personalized assistance with Auto-Anki? 
-We're here to help! Our dedicated support email, autoankisuppport@gmail.com, 
+Have a question, feedback, or need personalized assistance with Auto-Anki?
+We're here to help! Our dedicated support email, autoankisuppport@gmail.com,
 is your direct line to the Auto-Anki team. Here's what you can expect:
 
 **What We Can Assist With:**
-* Technical Issues: Encountering bugs, errors, or technical glitches? Share the details, 
-and we'll work to find a solution.
-* Usage Guidance: Need help navigating Auto-Anki's features? Ask for guidance on how to make the most 
-of your learning experience.
-* Feedback and Suggestions: Your thoughts matter! Share your feedback, suggestions, or ideas for 
-improving Auto-Anki. We value your input.
-* General Inquiries: Whether it's about the installation process, specific functionalities, or 
-any other general inquiry, drop us a line.
-* Contributor Queries: If you're interested in contributing to Auto-Anki or have questions about 
-the development process, feel free to reach out.
+
+- Technical Issues: Encountering bugs, errors, or technical glitches? Share the details,
+  and we'll work to find a solution.
+- Usage Guidance: Need help navigating Auto-Anki's features? Ask for guidance on how to make the most
+  of your learning experience.
+- Feedback and Suggestions: Your thoughts matter! Share your feedback, suggestions, or ideas for
+  improving Auto-Anki. We value your input.
+- General Inquiries: Whether it's about the installation process, specific functionalities, or
+  any other general inquiry, drop us a line.
+- Contributor Queries: If you're interested in contributing to Auto-Anki or have questions about
+  the development process, feel free to reach out.
 
 **How to Reach Us:**
 
-* Compose an Email: Craft an email detailing your query or concern and send it to autoankisuppport@gmail.com.
-* Subject Line: For efficient handling, include a brief but descriptive subject line related to your inquiry.
-* Include Details: Provide as much detail as possible about the issue or question you're facing. Attach 
-relevant screenshots if applicable.
-* Response Time: Our team is dedicated to responding promptly. While response times may vary, be assured
-that we're working to address your queries in a timely manner.
+- Compose an Email: Craft an email detailing your query or concern and send it to autoankisuppport@gmail.com.
+- Subject Line: For efficient handling, include a brief but descriptive subject line related to your inquiry.
+- Include Details: Provide as much detail as possible about the issue or question you're facing. Attach
+  relevant screenshots if applicable.
+- Response Time: Our team is dedicated to responding promptly. While response times may vary, be assured
+  that we're working to address your queries in a timely manner.
 
 **We're Here to Assist You:**
 
-* Team Members: The Auto-Anki support team comprises individuals passionate about providing excellent user experiences. 
-* Collaborative Approach: We believe in a collaborative approach to problem-solving. Your insights 
-and experiences contribute to the ongoing improvement of Auto-Anki.
-* Community Support: The support email isn't just for individual queries; it's a space for community 
-support. If multiple users face similar challenges, we may address common themes in broader communications.
+- Team Members: The Auto-Anki support team comprises individuals passionate about providing excellent user experiences.
+- Collaborative Approach: We believe in a collaborative approach to problem-solving. Your insights
+  and experiences contribute to the ongoing improvement of Auto-Anki.
+- Community Support: The support email isn't just for individual queries; it's a space for community
+  support. If multiple users face similar challenges, we may address common themes in broader communications.
+
 ## Project's funding
 
 Our project is currently not funded, and we operate on a volunteer and open-source basis , and currently,improvement of the project solely relies on the dedication of our team and contributions from the open-source community.
@@ -288,4 +288,4 @@ We have built the new features on top of the existing work developed by Keith Tr
 
 You can cite us like this:
 
-Auto-Anki with ChatGPT. Version 2.0. 
+Auto-Anki with ChatGPT. Version 2.0.
