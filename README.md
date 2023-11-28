@@ -15,7 +15,7 @@
 ![version](https://img.shields.io/badge/version-4.0-blue)
 ![Test Cases](https://img.shields.io/badge/tests-passing-green)
 ![Test Cases](https://img.shields.io/badge/test%20cases-20-green)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5745931.svg)](https://doi.org/10.5281/zenodo.5745931)
+[![DOI](https://zenodo.org/badge/721357912.svg)](https://zenodo.org/doi/10.5281/zenodo.10211861)
 
 <!-- ![github workflow](https://github.com/tran4code/SRIJAS/actions/workflows/unit_test.yml/badge.svg)
 ![Flake8 Style Check](https://github.com/tran4code/auto_anki/actions/workflows/Flake8%20Style%20Check/badge.svg)
