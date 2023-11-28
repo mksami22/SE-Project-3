@@ -22,7 +22,7 @@
 ![github workflow](https://github.com/tran4code/SRIJAS/actions/workflows/main.yml/badge.svg)
 ![github workflow](https://github.com/tran4code/SRIJAS/actions/workflows/code_cov.yml/badge.svg) -->
 
-## [Click here to see Auto Anki's Demo video](https://youtu.be/hLsI2FBElr0)
+## [Click here to see Auto Anki's Demo video](https://youtu.be/zZl59TlN048?feature=shared)
 
 <!-- TABLE OF CONTENTS -->
 
@@ -104,9 +104,11 @@ Previously, users had to manually load the apkg file of the flash deck into a th
 
 ## Check out the video!
 
-[![Anki v2.0](https://youtu.be/FwqogUaTo-s?feature=shared)](https://youtu.be/FwqogUaTo-s?feature=shared)
 
-[![Anki v2.0 Implementation Demo](https://youtu.be/zZl59TlN048?feature=shared)](https://youtu.be/zZl59TlN048?feature=shared)
+
+https://github.com/mksami22/SE-Project-3/assets/72796509/44f1f799-325c-45d5-84d6-54120bf77301
+
+
 
 # Successful usecases
 
