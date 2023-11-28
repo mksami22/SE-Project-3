@@ -12,7 +12,7 @@
 [![GitHub license](https://img.shields.io/github/license/mksami22/SE-Project-3)](https://github.com/mksami22/SE-Project-3/blob/main/LICENSE)
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/mksami22/SE-Project-3/pulls)
-![version](https://img.shields.io/badge/version-4.0-blue)
+![version](https://img.shields.io/badge/version-2.0-blue)
 ![Test Cases](https://img.shields.io/badge/tests-passing-green)
 ![Test Cases](https://img.shields.io/badge/test%20cases-20-green)
 [![DOI](https://zenodo.org/badge/721357912.svg)](https://zenodo.org/doi/10.5281/zenodo.10211861)
