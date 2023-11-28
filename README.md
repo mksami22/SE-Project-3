@@ -104,7 +104,9 @@ Previously, users had to manually load the apkg file of the flash deck into a th
 
 ## Check out the video!
 
-https://github.com/tran4code/auto_anki/assets/113017516/ab847e56-d290-4faf-9db6-d9967bc955d3
+[![Anki v2.0](https://youtu.be/FwqogUaTo-s?feature=shared)](https://youtu.be/FwqogUaTo-s?feature=shared)
+
+[![Anki v2.0 Implementation Demo](https://youtu.be/zZl59TlN048?feature=shared)](https://youtu.be/zZl59TlN048?feature=shared)
 
 # Successful usecases
 
